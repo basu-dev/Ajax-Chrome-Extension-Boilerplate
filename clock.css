@@ -1,0 +1,112 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    min-width:30vw;
+    background:#091921;    
+
+}
+/* button{
+    border:none;
+    background:#091921;
+    cursor: pointer;
+    color:white;
+    font-size: 1.1em;
+    position: absolute;
+    top:30%;
+    left:44%;
+    z-index:10000;
+    border:1px dotted #091921;
+    text-decoration: none;
+    padding:.3em .4em;
+    border-radius:3px;
+
+} */
+#qrcode{
+    position:absolute;
+    width:100px;
+    top:5px;
+    left:5px;
+}
+button:hover{
+    border:1px dotted grey;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background:url(clock.png);
+    background-size: cover;
+    border:8px solid #091921;
+    box-shadow:0 -15px 15px  rgba(255,255,255,.05),
+                inset 0  -15px 15px  rgba(255,255,255,.05),
+                0  15px 15px  rgba(0,0,0,.3),
+                inset 0  -15px 15px  rgba(0,0,0,.3);
+    border-radius:50%; 
+       
+}
+.clock::before{
+    content:'';
+    position: absolute;
+    height:14px;
+    width:14px;
+    background-color:white;
+    border-radius:50%;  
+    z-index: 20;
+    border:2px solid #091921;
+}
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+    position: absolute;
+}
+.clock .hour, .hr{
+    width:150px;
+    height:150px;
+    
+}
+.clock .min, .mn{
+    width:190px;
+    height:190px;
+
+}
+.clock .sec, .sc{
+    width:225px;
+    height:220px;
+
+}
+.hr, .mn ,.sc{
+    display:flex;
+    justify-content: center;
+    position: absolute;
+}
+.hr::before{
+    content:'';
+    position: absolute;
+    width:6px;
+    height:80px;
+    background:orangered;
+    border-radius: 4px;
+}
+.mn::before{
+    content:'';
+    position: absolute;
+    width:4px;
+    height:100px;
+    background:white;
+    border-radius: 3px;
+}
+.sc::before{
+    content:'';
+    position: absolute;
+    width:2px;
+    height:150px;
+    background:grey;
+    border-radius: 4px;
+}
